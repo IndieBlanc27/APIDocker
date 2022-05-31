@@ -1,2 +1,2 @@
-INSERT INTO users (id, nom, prenom, email, password, createdAt, updatedAt, deletedAt) VALUES
+INSERT INTO Users (id, nom, prenom, email, password, createdAt, updatedAt, deletedAt) VALUES
     (5, 'Embrasse', 'fanny', 'embrasse.fanny@gmail.com', '$2b$10$./e5H5GTVc9PTVJnNOBqEOPk5IH.PtT9SFNwO.928F8NW78Jp8uJS', '2022-05-31 10:07:39', '2022-05-31 10:07:39', NULL);
