@@ -1,0 +1,28 @@
+version: '3.1'
+services:
+  db:
+    image: mariadb
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: rootPassword
+      MARIADB_DATABASE: cocktails
+      MARIADB_USER: api_user
+      MARIADB_PASSWORD: api_password
+
+  api:
+    depends_on:
+      - db
+    image: api
+    ports: 
+      - 4000:4000
+    restart: always
+    environment:
+      DB_HOST: db
+      DB_NAME: cocktails
+      DB_USER: root
+      DB_PWD: rootPassword
+
+volumes:
+  db_data: {}
